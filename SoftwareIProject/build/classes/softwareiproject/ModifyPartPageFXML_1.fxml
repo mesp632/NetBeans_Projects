@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.Text?>
+
+<GridPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwareiproject.ModifyPartPageFXMLController_1"
+   alignment="CENTER" hgap="10"    vgap="10"> 
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    
+ <Text text="Modify Part" 
+        GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2"/>
+    
+    <fx:define>
+    <ToggleGroup fx:id="partToggle"/>
+    </fx:define>
+    
+        <RadioButton fx:id="inHouse" text="In House" toggleGroup="$partToggle" onAction="#handleInHouseButtonAction"
+        GridPane.columnIndex="3" GridPane.rowIndex="0" />
+    <RadioButton fx:id="outsource" text="outsource" toggleGroup="$partToggle" onAction="#handleOutsourceButtonAction"
+         GridPane.columnIndex="4" GridPane.rowIndex="0"/>  
+ 
+    <Label fx:id="testRadio" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+    
+    
+    <Label text="ID:"
+        GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+ 
+    <TextField fx:id="PartIDField" 
+        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+ 
+    <Label text="Name:"
+        GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+ 
+    <TextField fx:id="PartNameField" 
+        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    
+    <Label text="Inv:"
+        GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="PartInvField"
+        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    
+    <Label text="Price/Cost:"
+        GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <TextField fx:id="PartPriceField"
+        GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    
+    <Label text="Max:"
+        GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="PartMaxField"
+        GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    
+    <Label text="Min:"
+        GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+    <TextField fx:id="PartMinField"
+        GridPane.columnIndex="4" GridPane.rowIndex="5"/>
+    
+    <Label text="Company Name:" fx:id="CompanyNameText"
+        GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="PartCompanyNameField"
+        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    
+    <Label text="Machine ID:" fx:id="MachineIDText"
+        GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <TextField fx:id="PartMachineID"
+        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+   
+    <HBox spacing="10" alignment="bottom_left" 
+        GridPane.columnIndex="1" GridPane.rowIndex="10">
+        <Button text="Save"     
+        onAction="#handleSaveButtonAction"/>
+    </HBox>
+    
+    <Button text="Cancel" GridPane.columnIndex="2" GridPane.rowIndex="10" GridPane.columnSpan="2"
+    onAction="#handleCancelButtonAction"/>
+    
+    
+
+    <Text fx:id="actiontarget"
+       GridPane.columnIndex="0" GridPane.columnSpan="2"
+        GridPane.halignment="RIGHT" GridPane.rowIndex="6"/>
+</GridPane>
